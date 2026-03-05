@@ -146,16 +146,19 @@
             <table class="w-full border-collapse border border-gray-800 text-sm text-center">
                 <thead>
                     <tr class="bg-gray-100">
-                        <th class="border border-gray-800 p-3 w-24">วันที่</th>
-                        <th class="border border-gray-800 p-3 w-24">เวลา</th>
-                        <th class="border border-gray-800 p-3">ลูกค้า</th>
-                        <th class="border border-gray-800 p-3 w-20">พิเศษ</th>
-                        <th class="border border-gray-800 p-3 w-20">สด</th>
-                        <th class="border border-gray-800 p-3 w-20">โอน</th>
-                        <th class="border border-gray-800 p-3 w-20">ทิป</th>
-                        <th class="border border-gray-800 p-3 w-24">พนักงาน</th>
-                        <th class="border border-gray-800 p-3 w-24">Boss</th>
-                        <th class="border border-gray-800 p-3 w-32">หมายเหตุ</th>
+                        <th class="border border-gray-800 p-2 w-20">วันที่</th>
+                        <th class="border border-gray-800 p-2 w-20">เวลา</th>
+                        <th class="border border-gray-800 p-2 w-14">ลำดับ</th>
+                        <th class="border border-gray-800 p-2 w-12">50</th>
+                        <th class="border border-gray-800 p-2 w-12">79</th>
+                        <th class="border border-gray-800 p-2 w-12">99</th>
+                        <th class="border border-gray-800 p-2 w-16">โอโซน<br><span class="text-xs font-normal">150</span></th>
+                        <th class="border border-gray-800 p-2 w-16">พิเศษ</th>
+                        <th class="border border-gray-800 p-2 w-16">บุฟเฟ่ต์<br><span class="text-xs font-normal">+30</span></th>
+                        <th class="border border-gray-800 p-2 w-16">รวม</th>
+                        <th class="border border-gray-800 p-2 w-14">ทิป</th>
+                        <th class="border border-gray-800 p-2 w-24">พนักงาน Boss</th>
+                        <th class="border border-gray-800 p-2 w-28">หมายเหตุ</th>
                     </tr>
                 </thead>
                 <tbody id="tbody-template-1">
@@ -216,7 +219,8 @@
             const tbody1 = document.getElementById('tbody-template-1');
             let rows1 = '';
             for(let i=0; i<20; i++) {
-                rows1 += `<tr>${`<td class="border border-gray-800 p-4"></td>`.repeat(10)}</tr>`;
+                // เปลี่ยนจาก 10 คอลัมน์ เป็น 13 คอลัมน์ และปรับ p-4 เป็น p-3 ให้พอดีหน้ากระดาษ
+                rows1 += `<tr>${`<td class="border border-gray-800 p-3 h-8"></td>`.repeat(13)}</tr>`;
             }
             tbody1.innerHTML = rows1;
 
