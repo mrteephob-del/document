@@ -23,9 +23,6 @@
             }
         }
     </script>
-
-    <!-- นำเข้าไลบรารี html2pdf.js สำหรับสร้าง PDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body class="min-h-screen bg-slate-50 font-sans">
 
@@ -67,14 +64,13 @@
                 </div>
                 <div class="flex-grow">
                     <h3 class="text-lg font-bold text-slate-800 mb-2">ใบรับลูกค้า</h3>
-                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">ตารางบันทึกการเข้ารับบริการของลูกค้าแบบรายบุคคล (รูปแบบ PDF แนวนอน)</p>
-                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ใบรับลูกค้า_PORJA.pdf</div>
+                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">ตารางบันทึกการเข้ารับบริการของลูกค้าแบบรายบุคคล (ไฟล์ PDF ต้นฉบับ)</p>
+                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ใบรับลูกค้า.pdf</div>
                 </div>
-                <button id="btn-1" onclick="downloadPDF(1, 'ใบรับลูกค้า_PORJA.pdf', 'landscape')" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200 disabled:opacity-70 disabled:cursor-not-allowed">
-                    <svg id="loader-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 animate-spin hidden"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-                    <svg id="icon-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                    <span id="text-1">ดาวน์โหลด PDF</span>
-                </button>
+                <a href="ใบรับลูกค้า.pdf" download="ใบรับลูกค้า.pdf" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    <span>ดาวน์โหลด PDF ต้นฉบับ</span>
+                </a>
             </div>
 
             <!-- ไฟล์ที่ 2: ใบส่งยอดรวมรายวัน -->
@@ -89,14 +85,13 @@
                 </div>
                 <div class="flex-grow">
                     <h3 class="text-lg font-bold text-slate-800 mb-2">ใบส่งยอดรวมรายวัน</h3>
-                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">แบบฟอร์มสำหรับสรุปยอดรายได้และจำนวนลูกค้าประจำวัน (1 หน้ามี 4 บิล)</p>
-                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ใบส่งยอดรวมรายวัน_PORJA.pdf</div>
+                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">แบบฟอร์มสำหรับสรุปยอดรายได้และจำนวนลูกค้าประจำวัน (ไฟล์ PDF ต้นฉบับ)</p>
+                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ใบส่งยอดรวมรายวัน.pdf</div>
                 </div>
-                <button id="btn-2" onclick="downloadPDF(2, 'ใบส่งยอดรวมรายวัน_PORJA.pdf', 'portrait')" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200 disabled:opacity-70 disabled:cursor-not-allowed">
-                    <svg id="loader-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 animate-spin hidden"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-                    <svg id="icon-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                    <span id="text-2">ดาวน์โหลด PDF</span>
-                </button>
+                <a href="ใบส่งยอดรวมรายวัน.pdf" download="ใบส่งยอดรวมรายวัน.pdf" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    <span>ดาวน์โหลด PDF ต้นฉบับ</span>
+                </a>
             </div>
 
             <!-- ไฟล์ที่ 3: ปฏิทินร้าน -->
@@ -111,14 +106,13 @@
                 </div>
                 <div class="flex-grow">
                     <h3 class="text-lg font-bold text-slate-800 mb-2">ปฏิทินร้าน</h3>
-                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">ตารางปฏิทินสำหรับบันทึกคิวหรือวันหยุด (รูปแบบ PDF)</p>
-                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ปฏิทิน_PORJA.pdf</div>
+                    <p class="text-sm text-slate-600 line-clamp-3 mb-4">ตารางปฏิทินสำหรับบันทึกคิวหรือวันหยุด (ไฟล์ PDF ต้นฉบับ)</p>
+                    <div class="text-xs text-slate-400 font-mono mb-4 bg-slate-50 p-2 rounded">ปฏิทิน.pdf</div>
                 </div>
-                <button id="btn-3" onclick="downloadPDF(3, 'ปฏิทิน_PORJA.pdf', 'portrait')" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200 disabled:opacity-70 disabled:cursor-not-allowed">
-                    <svg id="loader-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 animate-spin hidden"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-                    <svg id="icon-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                    <span id="text-3">ดาวน์โหลด PDF</span>
-                </button>
+                <a href="ปฏิทิน.pdf" download="ปฏิทิน.pdf" class="w-full mt-auto flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white py-2.5 px-4 rounded-xl font-medium transition-colors focus:ring-4 focus:ring-slate-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                    <span>ดาวน์โหลด PDF ต้นฉบับ</span>
+                </a>
             </div>
 
         </div>
@@ -128,199 +122,11 @@
             <div>
                 <h4 class="font-semibold text-blue-900">คำแนะนำการใช้งาน</h4>
                 <ul class="text-sm text-blue-800 mt-1 list-disc list-inside space-y-1">
-                    <li>คุณสามารถเซฟไฟล์หน้านี้ (index.html) เก็บไว้ในเครื่อง และกดเปิดขึ้นมาใช้งานเพื่อสร้าง PDF ได้ตลอดเวลาโดยไม่ต้องต่ออินเทอร์เน็ตแรงๆ</li>
-                    <li>ไฟล์ PDF ถูกจัดรูปแบบให้พร้อมสำหรับการพิมพ์ลงบนกระดาษ A4 ได้ทันที</li>
+                    <li>เพื่อการใช้งานที่ถูกต้อง <strong>กรุณานำไฟล์ต้นฉบับทั้ง 3 ไฟล์</strong> (<code>ใบรับลูกค้า.pdf</code>, <code>ใบส่งยอดรวมรายวัน.pdf</code>, <code>ปฏิทิน.pdf</code>) มาวางไว้ใน <strong>"โฟลเดอร์เดียวกัน"</strong> กับไฟล์ <code>index.html</code> นี้ในคอมพิวเตอร์ของคุณ</li>
+                    <li>เมื่อคลิกที่ปุ่ม ระบบจะดึงไฟล์ต้นฉบับที่คุณวางไว้ในโฟลเดอร์เดียวกันนั้น ขึ้นมาให้ดาวน์โหลดทันทีโดยไม่มีการเปลี่ยนแปลงใดๆ</li>
                 </ul>
             </div>
         </div>
     </main>
-
-    <!-- ========================================== -->
-    <!-- HIDDEN TEMPLATES FOR PDF GENERATION        -->
-    <!-- ========================================== -->
-    <div class="absolute top-[-9999px] left-[-9999px] opacity-0 pointer-events-none">
-        
-        <!-- Template 1: ใบรับลูกค้า -->
-        <div id="pdf-template-1" class="p-8 bg-white text-black" style="width: 297mm; min-height: 210mm;">
-            <h1 class="text-2xl font-bold text-center mb-6">ใบรับลูกค้า PORJA EXPRESS HAIR WASH</h1>
-            <table class="w-full border-collapse border border-gray-800 text-sm text-center">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="border border-gray-800 p-2 w-14">วันที่</th>
-                        <th class="border border-gray-800 p-2 w-14">เวลา</th>
-                        <th class="border border-gray-800 p-2 w-12">ลำดับ</th>
-                        <th class="border border-gray-800 p-2 w-10">50</th>
-                        <th class="border border-gray-800 p-2 w-10">79</th>
-                        <th class="border border-gray-800 p-2 w-10">99</th>
-                        <th class="border border-gray-800 p-2 w-16">โอโซน<br><span class="text-xs font-normal">150</span></th>
-                        <th class="border border-gray-800 p-2 w-16">พิเศษ<br><span class="text-xs font-normal">+30 บ</span></th>
-                        <th class="border border-gray-800 p-2 w-16">บุฟเฟ่ต์<br><span class="text-xs font-normal">+30</span></th>
-                        <th class="border border-gray-800 p-2 w-12">รวม</th>
-                        <th class="border border-gray-800 p-2 w-12">ทิป</th>
-                        <th class="border border-gray-800 p-2 w-16">พนักงาน</th>
-                        <th class="border border-gray-800 p-2 w-14">Boss</th>
-                        <th class="border border-gray-800 p-2 w-24">หมายเหตุ</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody-template-1">
-                    <!-- Rows จะถูกแทรกด้วย JavaScript ตอนโหลดหน้าเว็บ เพื่อประหยัดบรรทัดโค้ด -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Template 2: ใบส่งยอดรวมรายวัน (สร้าง 4 บิลใน 1 หน้า) -->
-        <div id="pdf-template-2" class="p-8 bg-white text-black" style="width: 210mm; min-height: 297mm;">
-            <div id="grid-template-2" class="grid grid-cols-2 gap-8">
-                <!-- Blocks จะถูกแทรกด้วย JavaScript -->
-            </div>
-        </div>
-
-        <!-- Template 3: ปฏิทินร้าน -->
-        <div id="pdf-template-3" class="p-10 bg-white text-black" style="width: 210mm; min-height: 297mm;">
-            <h1 class="text-3xl font-bold text-center mb-2">PORJA EXPRESS HAIR WASH</h1>
-            <h2 class="text-xl text-center mb-8">วัน.........เดือน.........ปี......... (.......................................)</h2>
-            <table class="w-full border-collapse border-2 border-gray-800 text-center table-fixed">
-                <thead>
-                    <tr class="bg-gray-100">
-                        <th class="border-2 border-gray-800 py-4 text-lg">จันทร์</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg">อังคาร</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg">พุธ</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg">พฤหัสบดี</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg">ศุกร์</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg bg-red-50 text-red-600">เสาร์</th>
-                        <th class="border-2 border-gray-800 py-4 text-lg bg-red-50 text-red-600">อาทิตย์</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">1</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">2</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">3</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">4</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">5</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">6</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">7</td></tr>
-                    <tr><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">8</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">9</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">10</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">11</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">12</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">13</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">14</td></tr>
-                    <tr><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">15</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">16</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">17</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">18</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">19</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">20</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">21</td></tr>
-                    <tr><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">22</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">23</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">24</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">25</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">26</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">27</td><td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">28</td></tr>
-                    <tr>
-                        <td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">29</td>
-                        <td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">30</td>
-                        <td class="border-2 border-gray-800 py-10 text-xl font-bold align-top text-left px-2">31</td>
-                        <td class="border-2 border-gray-800 py-10 bg-gray-50"></td>
-                        <td class="border-2 border-gray-800 py-10 bg-gray-50"></td>
-                        <td class="border-2 border-gray-800 py-10 bg-gray-50"></td>
-                        <td class="border-2 border-gray-800 py-10 bg-gray-50"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-
-    <!-- Script ควบคุมการทำงานทั้งหมด -->
-    <script>
-        // สร้างตาราง/ช่องว่างใน Template อัตโนมัติเมื่อโหลดหน้าเว็บ
-        document.addEventListener('DOMContentLoaded', () => {
-            
-            // สร้างช่องว่าง 20 แถว สำหรับใบรับลูกค้า
-            const tbody1 = document.getElementById('tbody-template-1');
-            let rows1 = '';
-            for(let i=0; i<20; i++) {
-                // เปลี่ยนจาก 13 คอลัมน์ เป็น 14 คอลัมน์ โดยแยก พนักงาน และ Boss ออกจากกัน
-                rows1 += `<tr>${`<td class="border border-gray-800 p-2 h-8"></td>`.repeat(14)}</tr>`;
-            }
-            tbody1.innerHTML = rows1;
-
-            // สร้างบิล 4 ใบ สำหรับใบส่งยอด
-            const grid2 = document.getElementById('grid-template-2');
-            let blocks2 = '';
-            const billTemplate = `
-                <div class="border-2 border-gray-800 p-6 rounded-xl">
-                    <h2 class="text-center font-bold text-2xl tracking-widest">PORJA</h2>
-                    <h3 class="text-center font-bold text-lg mb-4">EXPRESS HAIR WASH</h3>
-                    <div class="flex justify-between mb-4 text-sm">
-                        <span>วันที่......../......../........</span>
-                        <span>(.....................................)</span>
-                    </div>
-                    <div class="space-y-3 text-sm font-medium">
-                        <div class="flex justify-between">
-                            <span>ลูกค้าทั้งหมด...................คน</span>
-                            <span>รวม.........................บาท</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>เงินสด.............................บาท</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>เงินโอน.........................บาท</span>
-                            <span>...........บิล</span>
-                        </div>
-                        <div class="flex justify-between mt-2">
-                            <span>ผู้ชาย 50 บาท ............คน</span>
-                            <span>รวม.........................บาท</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>ผู้หญิง 79 บาท ............คน</span>
-                            <span>รวม.........................บาท</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span>ผู้หญิง 99 บาท ............คน</span>
-                            <span>รวม.........................บาท</span>
-                        </div>
-                        <div class="flex justify-between mt-2">
-                            <span>พิเศษ</span>
-                            <span>.........................บาท</span>
-                        </div>
-                        <div class="mt-4">
-                            <span>รายจ่าย ....................................................................</span>
-                        </div>
-                        <div class="mt-2">
-                            <span>..................................................................................</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-            for(let i=0; i<4; i++) {
-                blocks2 += billTemplate;
-            }
-            grid2.innerHTML = blocks2;
-        });
-
-        // ฟังก์ชันดาวน์โหลด PDF
-        async function downloadPDF(id, filename, orientation) {
-            const btn = document.getElementById(`btn-${id}`);
-            const iconDefault = document.getElementById(`icon-${id}`);
-            const iconLoader = document.getElementById(`loader-${id}`);
-            const textSpan = document.getElementById(`text-${id}`);
-
-            // เปลี่ยนหน้าตาปุ่มเป็นสถานะกำลังโหลด
-            btn.disabled = true;
-            btn.classList.add('opacity-70', 'cursor-not-allowed');
-            iconDefault.classList.add('hidden');
-            iconLoader.classList.remove('hidden');
-            textSpan.textContent = 'กำลังสร้าง PDF...';
-
-            try {
-                // ดึงโครงสร้าง HTML ของเทมเพลตเป้าหมาย
-                const element = document.getElementById(`pdf-template-${id}`);
-                
-                // ตั้งค่าคุณสมบัติของ PDF
-                const opt = {
-                    margin: 10,
-                    filename: filename,
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: { scale: 2, useCORS: true },
-                    jsPDF: { unit: 'mm', format: 'a4', orientation: orientation }
-                };
-                
-                // สั่งสร้างและดาวน์โหลด
-                await html2pdf().set(opt).from(element).save();
-
-            } catch (error) {
-                console.error("PDF Generation failed", error);
-                alert("เกิดข้อผิดพลาดในการสร้างไฟล์ PDF");
-            } finally {
-                // คืนค่าหน้าตาปุ่มกลับเป็นปกติ
-                btn.disabled = false;
-                btn.classList.remove('opacity-70', 'cursor-not-allowed');
-                iconDefault.classList.remove('hidden');
-                iconLoader.classList.add('hidden');
-                textSpan.textContent = 'ดาวน์โหลด PDF';
-            }
-        }
-    </script>
 </body>
 </html>
